@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureGroup>
+  <texture scale="1" mipsToGenerate="0" texwidth="256" texheight="256">default_0.bz2</texture>
+  <tpe x="2" y="2" tpage="default_0.bz2">spr_vMoving_platform_91c01dd8-978b-49f3-9e90-49bb86a13722.tpe</tpe>
+  <tpe x="2" y="70" tpage="default_0.bz2">spr_hMoving_platform_e372364b-8c97-4488-97c6-6927ef73cb5e.tpe</tpe>
+  <tpe x="2" y="124" tpage="default_0.bz2">spr_player_b7cf347b-426a-4022-86b4-3f5d249cda48.tpe</tpe>
+  <tpe x="70" y="124" tpage="default_0.bz2">spr_tramp_0cf9022a-2ffe-4648-8402-3e55346cb33a.tpe</tpe>
+  <tpe x="138" y="2" tpage="default_0.bz2">spr_wall_eecbbe4d-225a-4d1b-87de-1a4961bcca4f.tpe</tpe>
+  <tpe x="138" y="70" tpage="default_0.bz2">spr_jumpThrough_5d76927f-1cb9-449e-9eda-e2dc00ed0a15.tpe</tpe>
+</TextureGroup>
