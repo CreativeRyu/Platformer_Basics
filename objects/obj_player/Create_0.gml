@@ -3,14 +3,14 @@ controls_setup();
 
 // Movement Variables
 move_direction = 0;
-move_speed = 4;
+move_speed = 3;
 horizontal_speed = 0;
 vertical_speed = 0;
 
 // Jumping Variables
 
 gravy = 0.275;
-terminal_velocity = 20;
+terminal_velocity = 5;
 jump_speed = -4;
 
 // Multiple Jumps

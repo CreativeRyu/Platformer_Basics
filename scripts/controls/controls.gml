@@ -28,16 +28,14 @@ function get_controls(){
 	jump_key = keyboard_check(vk_space) + gamepad_button_check(0, gp_face1);
 	
 	// Jump Key Buffering
-	if (jump_key_pressed)
-	{
+	if (jump_key_pressed) {
 		jump_key_buffer_timer = jump_buffer_time;
 	}
-	if (jump_key_buffer_timer > 0)
-	{
+	if (jump_key_buffer_timer > 0) {
 		is_jump_key_buffered = 1;
 		jump_key_buffer_timer--;
-	} else
-	{
+	} 
+	else {
 		is_jump_key_buffered = 0;
 	}
 }

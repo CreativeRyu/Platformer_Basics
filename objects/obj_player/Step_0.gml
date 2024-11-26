@@ -22,60 +22,49 @@ x += horizontal_speed;
 vertical_speed += gravy;
 
 // Reset and prepare Jumping Variables
-if is_grounded
-{
+if is_grounded {
 	jump_count = 0;
 	jump_speed = -4;
 }
-else 
-{
+else {
 	if jump_count == 0 {jump_count = 1;}
 }
 
-if is_on_tramp(x, y + 1, obj_tramp)
-{
+if is_on_tramp(x, y + 1, obj_tramp) {
 	jump_speed += tramp_acceleration
 }
 
-if jump_count > 1
-{
+if jump_count > 1 {
 	jump_speed = -4;
 }
 
 // Jump Initialization
-if(is_jump_key_buffered and jump_count < jump_max)
-{
+if(is_jump_key_buffered and jump_count < jump_max) {
 	is_jump_key_buffered = false;
 	jump_key_buffer_timer = 0;
-	
 	// Erhöhe die Nummer der durchgeführten Sprünge
 	jump_count++;
-	
 	// Set jump hold timer
 	jump_hold_timer = jump_hold_frames;
 }
 
 // Sprung unterbrechen wenn der Jump Button los gelassen wird
-if !jump_key
-{
+if !jump_key {
 	jump_hold_timer = 0;
 }
 
 // Jump based on the timer holding button
-if jump_hold_timer > 0 
-{
+if jump_hold_timer > 0 {
 	vertical_speed = jump_speed;
 
 	jump_hold_timer--;
 }
 
 // Vertical Collision
-
 // Cap Falling Speed
 if vertical_speed > terminal_velocity {vertical_speed = terminal_velocity};
 
-if(place_meeting(x, y + vertical_speed, obj_wall)) 
-{
+if(place_meeting(x, y + vertical_speed, obj_wall)) {
 	while(!place_meeting(x, y + sign(vertical_speed), obj_wall)) 
 	{
 		y += sign(vertical_speed);
@@ -91,13 +80,11 @@ if(place_meeting(x, y + vertical_speed, obj_tramp)) {
 	vertical_speed = 0;
 }
 
-// Check if Player is on ground
-if vertical_speed >= 0 && place_meeting(x, y + 1, [obj_wall, obj_tramp])
-{
+// Check if Player is on ground and Set it is
+if vertical_speed >= 0 && place_meeting(x, y + 1, [obj_wall, obj_tramp]) {
 	is_grounded = true;
 }
-else
-{
+else {
 	is_grounded = false;
 }
 
